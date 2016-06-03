@@ -4,3 +4,4 @@ dist/docs
 .idea
 .DS_Store
 *.log*
+.publish

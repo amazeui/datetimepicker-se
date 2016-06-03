@@ -4,10 +4,9 @@ node_modules
 /dist/*.html
 /dist/docs
 /docs
-tasks
 gulpfile.js
 .editorconfig
 .gitignore
-.jshintrc
 .npmignore
-bower.json
+.publish
+.eslintrc
