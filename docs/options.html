@@ -1,0 +1,346 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI DatetimePicker SE 参数列表 | Amaze UI 插件</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png"
+        href="http://s.amazeui.org/assets/2.x/i/favicon.png">
+  <link rel="stylesheet"
+        href="http://cdn.amazeui.org/amazeui/2.6.2/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://s.amazeui.org/assets/plugin/css/app.min.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lte IE 8 ]>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../amazeui.datetimepicker-se.css"/>
+</head>
+<body class="am-plugin">
+<header class="am-topbar am-topbar-inverse">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="http://amazeui.org" class="am-text-ir">Amaze UI</a>
+      <span class="am-badge am-badge-danger">Plugin</span>
+    </h1>
+  </div>
+</header>
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI DatetimePicker SE</h1>
+    <p class="">支持秒的日期时间选择器</p>
+      <p>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se">Star</a>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se">Fork</a>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se/archive/master.zip">Download</a>
+      </p>
+  </div>
+</section>
+
+<section class="amp-main">
+  <div class="am-container amp-content">
+    <h1><a name="datetimepicker-se-can-shu-lie-biao" class="anchor" href="#datetimepicker-se-can-shu-lie-biao"><span class="header-link"></span></a>DatetimePicker SE 参数列表</h1><hr>
+<h2><a name="wen-dang-dao-hang" class="anchor" href="#wen-dang-dao-hang"><span class="header-link"></span></a>文档导航</h2><ul>
+<li><a href="../">插件首页</a></li>
+<li><a href="demo.html">使用演示</a></li>
+<li><a href="options.html">参数文档</a></li>
+<li><a href="methods.html">方法文档</a></li>
+<li><a href="events.html">事件文档</a></li>
+</ul>
+<h2><a name="options" class="anchor" href="#options"><span class="header-link"></span></a>Options</h2><h3><a name="format" class="anchor" href="#format"><span class="header-link"></span></a>format</h3><pre>Default: false
+
+</pre><p>See <a href="http://momentjs.com/docs/#/displaying/format/">momentjs&#39; docs</a> for valid formats. Format also dictates what components are shown, e.g. <code>MM/dd/YYYY</code> will not display the time picker.</p>
+<hr>
+<h3><a name="dayviewheaderformat" class="anchor" href="#dayviewheaderformat"><span class="header-link"></span></a>dayViewHeaderFormat</h3><pre>Default: &#39;MMMM YYYY&#39;
+
+</pre><p>Changes the heading of the datepicker when in &quot;days&quot; view.</p>
+<p><img src="img/dpheader.png" alt="Datepicker Header"></p>
+<hr>
+<h3><a name="extraformats" class="anchor" href="#extraformats"><span class="header-link"></span></a>extraFormats</h3><pre>Default: false
+
+</pre><p>Allows for several input formats to be valid. See <a href="https://github.com/Eonasdan/bootstrap-datetimepicker/pull/666">this PR</a>.</p>
+<hr>
+<h3><a name="stepping" class="anchor" href="#stepping"><span class="header-link"></span></a>stepping</h3><pre>Default: 1
+
+</pre><p>Number of minutes the up/down arrow&#39;s will move the minutes value in the time picker</p>
+<hr>
+<h3><a name="mindate" class="anchor" href="#mindate"><span class="header-link"></span></a>minDate</h3><pre>Default: false
+Accepts: date, moment, string
+
+</pre><p>Prevents date/time selections before this date.</p>
+<h4><a name="codemindatecode-will-override-codedefaultdatecode-and-codeusecurrentcode-if-either-of-these-settings-are-the-same-day-since-both-options-are-invalid-according-to-the-rules-you39ve-selected-" class="anchor" href="#codemindatecode-will-override-codedefaultdatecode-and-codeusecurrentcode-if-either-of-these-settings-are-the-same-day-since-both-options-are-invalid-according-to-the-rules-you39ve-selected-"><span class="header-link"></span></a><code>minDate</code> will override <code>defaultDate</code> and <code>useCurrent</code> if either of these settings are the same day since both options are invalid according to the rules you&#39;ve selected.</h4><hr>
+<h3><a name="maxdate" class="anchor" href="#maxdate"><span class="header-link"></span></a>maxDate</h3><pre>Default: false
+Accepts: date, moment, string
+
+</pre><p>Prevents date/time selections after this date.</p>
+<h4><a name="codemaxdatecode-will-override-codedefaultdatecode-and-codeusecurrentcode-if-either-of-these-settings-are-the-same-day-since-both-options-are-invalid-according-to-the-rules-you39ve-selected-" class="anchor" href="#codemaxdatecode-will-override-codedefaultdatecode-and-codeusecurrentcode-if-either-of-these-settings-are-the-same-day-since-both-options-are-invalid-according-to-the-rules-you39ve-selected-"><span class="header-link"></span></a><code>maxDate</code> will override <code>defaultDate</code> and <code>useCurrent</code> if either of these settings are the same day since both options are invalid according to the rules you&#39;ve selected.</h4><hr>
+<h3><a name="usecurrent" class="anchor" href="#usecurrent"><span class="header-link"></span></a>useCurrent</h3><pre>Default: true
+
+</pre><p>On show, will set the picker to the current date/time</p>
+<hr>
+<h3><a name="collapse" class="anchor" href="#collapse"><span class="header-link"></span></a>collapse</h3><pre>Default: true
+
+</pre><p>Using a Bootstraps collapse to switch between date/time pickers.</p>
+<hr>
+<h3><a name="locale" class="anchor" href="#locale"><span class="header-link"></span></a>locale</h3><pre>Default: moment.locale()
+Accepts: string, moment.local(&#39;locale&#39;)
+
+</pre><p>See <a href="https://github.com/moment/moment/tree/develop/locale">momentjs</a> for valid locales.</p>
+<p>You must include <code>moment-with-locales.js</code> or a local js file.</p>
+<hr>
+<h3><a name="defaultdate" class="anchor" href="#defaultdate"><span class="header-link"></span></a>defaultDate</h3><pre>Default: false
+Accepts: date, moment, string
+
+</pre><p>Sets the picker default date/time. Overrides <code>useCurrent</code></p>
+<hr>
+<h3><a name="disableddates" class="anchor" href="#disableddates"><span class="header-link"></span></a>disabledDates</h3><pre>Default: false
+Accepts: array of [date, moment, string]
+
+</pre><p>Disables selection of dates in the array, e.g. holidays</p>
+<hr>
+<h3><a name="enableddates" class="anchor" href="#enableddates"><span class="header-link"></span></a>enabledDates</h3><pre>Default: false
+Accepts: array of [date, moment, string]
+
+</pre><p>Disables selection of dates <strong>NOT</strong> in the array, e.g. holidays</p>
+<hr>
+<h3><a name="icons" class="anchor" href="#icons"><span class="header-link"></span></a>icons</h3><pre>Default: {
+            time: &#39;glyphicon glyphicon-time&#39;,
+            date: &#39;glyphicon glyphicon-calendar&#39;,
+            up: &#39;glyphicon glyphicon-chevron-up&#39;,
+            down: &#39;glyphicon glyphicon-chevron-down&#39;,
+            previous: &#39;glyphicon glyphicon-chevron-left&#39;,
+            next: &#39;glyphicon glyphicon-chevron-right&#39;,
+            today: &#39;glyphicon glyphicon-screenshot&#39;,
+            clear: &#39;glyphicon glyphicon-trash&#39;,
+            close: &#39;glyphicon glyphicon-remove&#39;
+        }
+Accepts: object with all or some of the parameters above
+
+</pre><p>Change the default icons for the pickers functions.</p>
+<h3><a name="usestrict" class="anchor" href="#usestrict"><span class="header-link"></span></a>useStrict</h3><pre>Default: false
+
+</pre><p>Defines if moment should use strict date parsing when considering a date to be valid</p>
+<hr>
+<h3><a name="sidebyside" class="anchor" href="#sidebyside"><span class="header-link"></span></a>sideBySide</h3><pre>Default: false
+
+</pre><p>Shows the picker side by side when using the time and date together.</p>
+<p><img src="img/sideBySide.png" alt="SideBySide"></p>
+<hr>
+<h3><a name="daysofweekdisabled" class="anchor" href="#daysofweekdisabled"><span class="header-link"></span></a>daysOfWeekDisabled</h3><pre>Default: []
+Accepts: array of numbers from 0-6
+
+</pre><p>Disables the section of days of the week, e.g. weekends.</p>
+<hr>
+<h3><a name="calendarweeks" class="anchor" href="#calendarweeks"><span class="header-link"></span></a>calendarWeeks</h3><pre>Default: false
+
+</pre><p>Shows the week of the year to the left of first day of the week.</p>
+<p><img src="img/calendarWeeks.png" alt="calendarWeek"></p>
+<hr>
+<h3><a name="viewmode" class="anchor" href="#viewmode"><span class="header-link"></span></a>viewMode</h3><pre>Default: &#39;days&#39;
+Accepts: &#39;decades&#39;,&#39;years&#39;,&#39;months&#39;,&#39;days&#39;
+
+</pre><p>The default view to display when the picker is shown.</p>
+<p><strong>Note</strong>: To limit the picker to selecting, for instance the year and month, use <code>format: MM/YYYY</code></p>
+<hr>
+<h3><a name="toolbarplacement" class="anchor" href="#toolbarplacement"><span class="header-link"></span></a>toolbarPlacement</h3><pre>Default: &#39;default&#39;
+Accepts: &#39;default&#39;, &#39;top&#39;, &#39;bottom&#39;
+
+</pre><p>Changes the placement of the icon toolbar.</p>
+<p><img src="img/toolbarPlacement.png" alt="toolbarPlacement"></p>
+<hr>
+<h3><a name="showtodaybutton" class="anchor" href="#showtodaybutton"><span class="header-link"></span></a>showTodayButton</h3><pre>Default: false
+
+</pre><p>Show the &quot;Today&quot; button in the icon toolbar.</p>
+<p>Clicking the &quot;Today&quot; button will set the calendar view and set the date to <code>now</code>.</p>
+<hr>
+<h3><a name="showclear" class="anchor" href="#showclear"><span class="header-link"></span></a>showClear</h3><pre>Default: false
+
+</pre><p>Show the &quot;Clear&quot; button in the icon toolbar.</p>
+<p>Clicking the &quot;Clear&quot; button will set the calendar to null.</p>
+<hr>
+<h3><a name="showclose" class="anchor" href="#showclose"><span class="header-link"></span></a>showClose</h3><pre>Default: false
+
+</pre><p>Show the &quot;Close&quot; button in the icon toolbar.</p>
+<p>Clicking the &quot;Close&quot; button will call <code>hide()</code></p>
+<hr>
+<h3><a name="widgetpositioning" class="anchor" href="#widgetpositioning"><span class="header-link"></span></a>widgetPositioning</h3><pre>Default: {
+            horizontal: &#39;auto&#39;
+            vertical: &#39;auto&#39;
+         }
+Accepts: object with the all or one of the parameters above
+         horizontal: &#39;auto&#39;, &#39;left&#39;, &#39;right&#39;
+         vertical: &#39;auto&#39;, &#39;top&#39;, &#39;bottom&#39;
+
+</pre><h3><a name="widgetparent" class="anchor" href="#widgetparent"><span class="header-link"></span></a>widgetParent</h3><pre>Default: null
+Accepts: string or jQuery object
+
+</pre><p>On picker show, places the widget at the identifier (string) or jQuery object <strong>if</strong> the element has css <code>position: &#39;relative&#39;</code></p>
+<hr>
+<h3><a name="keepopen" class="anchor" href="#keepopen"><span class="header-link"></span></a>keepOpen</h3><pre>Default: false
+
+</pre><p>Will cause the date picker to stay open after selecting a date if no time components are being used.</p>
+<hr>
+<h3><a name="inline" class="anchor" href="#inline"><span class="header-link"></span></a>inline</h3><pre>Default: false
+
+</pre><p>Will display the picker inline without the need of a input field. This will also hide borders and shadows.</p>
+<hr>
+<h3><a name="keepinvalid" class="anchor" href="#keepinvalid"><span class="header-link"></span></a>keepInvalid</h3><pre>Default: false
+
+</pre><p>Will cause the date picker to <strong>not</strong> revert or overwrite invalid dates.</p>
+<hr>
+<h3><a name="keybinds" class="anchor" href="#keybinds"><span class="header-link"></span></a>keyBinds</h3><pre>Default: up: function (widget) {
+            if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().subtract(7, &#39;d&#39;));
+            } else {
+                this.date(this.date().clone().add(1, &#39;m&#39;));
+            }
+        },
+        down: function (widget) {
+            if (!widget) {
+                this.show();
+            }
+            else if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().add(7, &#39;d&#39;));
+            } else {
+                this.date(this.date().clone().subtract(1, &#39;m&#39;));
+            }
+        },
+        &#39;control up&#39;: function (widget) {
+            if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().subtract(1, &#39;y&#39;));
+            } else {
+                this.date(this.date().clone().add(1, &#39;h&#39;));
+            }
+        },
+        &#39;control down&#39;: function (widget) {
+            if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().add(1, &#39;y&#39;));
+            } else {
+                this.date(this.date().clone().subtract(1, &#39;h&#39;));
+            }
+        },
+        left: function (widget) {
+            if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().subtract(1, &#39;d&#39;));
+            }
+        },
+        right: function (widget) {
+            if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().add(1, &#39;d&#39;));
+            }
+        },
+        pageUp: function (widget) {
+            if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().subtract(1, &#39;M&#39;));
+            }
+        },
+        pageDown: function (widget) {
+            if (widget.find(&#39;.datepicker&#39;).is(&#39;:visible&#39;)) {
+                this.date(this.date().clone().add(1, &#39;M&#39;));
+            }
+        },
+        enter: function () {
+            this.hide();
+        },
+        escape: function () {
+            this.hide();
+        },
+        &#39;control space&#39;: function (widget) {
+            if (widget.find(&#39;.timepicker&#39;).is(&#39;:visible&#39;)) {
+                widget.find(&#39;.btn[data-action=&quot;togglePeriod&quot;]&#39;).click();
+            }
+        },
+        t: function () {
+            this.date(moment());
+        },
+        &#39;delete&#39;: function () {
+            this.clear();
+        }
+
+</pre><p>Allows for custom events to fire on keyboard press.</p>
+<hr>
+<h3><a name="debug" class="anchor" href="#debug"><span class="header-link"></span></a>debug</h3><p><small>4.7.14</small></p>
+<pre>Default: false
+
+</pre><p>Will cause the date picker to stay open after a <code>blur</code> event.</p>
+<hr>
+<h3><a name="ignorereadonly" class="anchor" href="#ignorereadonly"><span class="header-link"></span></a>ignoreReadonly</h3><p><small>4.7.14</small></p>
+<pre>Default: false
+
+</pre><p>Allow date picker show event to fire even when the associated input element has the <code>readonly=&quot;readonly&quot;</code>property.</p>
+<hr>
+<h3><a name="disabledtimeintervals" class="anchor" href="#disabledtimeintervals"><span class="header-link"></span></a>disabledTimeIntervals</h3><p><small>4.14.30</small></p>
+<pre>Default: false
+
+</pre><p>Disables time selection between the given <code>moments</code></p>
+<hr>
+<h3><a name="allowinputtoggle" class="anchor" href="#allowinputtoggle"><span class="header-link"></span></a>allowInputToggle</h3><p><small>4.14.30</small></p>
+<pre>Default: false
+
+</pre><p>If <code>true</code>, the picker will show on textbox focus and icon click when used in a button group</p>
+<hr>
+<h3><a name="focusonshow" class="anchor" href="#focusonshow"><span class="header-link"></span></a>focusOnShow</h3><p><small>4.14.30</small></p>
+<pre>Default: true
+
+</pre><p>If <code>false</code>, the textbox will not be given focus when the picker is shown</p>
+<hr>
+<h3><a name="enabledhours" class="anchor" href="#enabledhours"><span class="header-link"></span></a>enabledHours</h3><p><small>4.14.30</small></p>
+<pre>Default: false
+
+</pre><p>Will allow or disallow hour selections (much like <code>disabledTimeIntervals</code>) but will affect all days</p>
+<hr>
+<h3><a name="disabledhours" class="anchor" href="#disabledhours"><span class="header-link"></span></a>disabledHours</h3><p><small>4.14.30</small></p>
+<pre>Default: false
+
+</pre><p>Will allow or disallow hour selections (much like <code>disabledTimeIntervals</code>) but will affect all days</p>
+<hr>
+<h3><a name="viewdate" class="anchor" href="#viewdate"><span class="header-link"></span></a>viewDate</h3><p><small>4.14.30</small></p>
+<pre>Default: false
+
+</pre><p>This will change the <code>viewDate</code> without changing or setting the selected date.</p>
+
+
+    <nav class="amp-pager">
+        <ul class="am-pagination">
+          <li class="am-pagination-prev"><a href="events.html">&laquo; Prev</a>
+          </li>
+            <li class="am-pagination-next"><a href="methods.html">Next &raquo;</a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<footer class="amp-footer"><div class="am-g am-g-fixed"><div class="am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="http://weibo.com/amazeui" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="https://github.com/amazeui/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="http://amazeui.org/about/contact">联系我们</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="http://s.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amp-toolbar" id="amp-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amp-go-top"></a></div>
+<script src="http://s.amazeui.org/assets/plugin/js/app.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hm);
+  })();
+
+  (function(w, d, s) {
+    function gs(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(w , d, s ,'//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34196034-8', 'amazeui.org');
+      ga('send', 'pageview');
+    }
+    if (w.addEventListener) { w.addEventListener('load', gs, false); }
+    else if (w.attachEvent) { w.attachEvent('onload',gs); }
+  }(window, document, 'script'));
+</script>
+</body>
+</html>

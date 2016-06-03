@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI DatetimePicker SE 事件列表 | Amaze UI 插件</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png"
+        href="http://s.amazeui.org/assets/2.x/i/favicon.png">
+  <link rel="stylesheet"
+        href="http://cdn.amazeui.org/amazeui/2.6.2/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://s.amazeui.org/assets/plugin/css/app.min.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lte IE 8 ]>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../amazeui.datetimepicker-se.css"/>
+</head>
+<body class="am-plugin">
+<header class="am-topbar am-topbar-inverse">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="http://amazeui.org" class="am-text-ir">Amaze UI</a>
+      <span class="am-badge am-badge-danger">Plugin</span>
+    </h1>
+  </div>
+</header>
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI DatetimePicker SE</h1>
+    <p class="">支持秒的日期时间选择器</p>
+      <p>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se">Star</a>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se">Fork</a>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se/archive/master.zip">Download</a>
+      </p>
+  </div>
+</section>
+
+<section class="amp-main">
+  <div class="am-container amp-content">
+    <h1><a name="datetimepicker-se-shi-jian-lie-biao" class="anchor" href="#datetimepicker-se-shi-jian-lie-biao"><span class="header-link"></span></a>DatetimePicker SE 事件列表</h1><hr>
+<h2><a name="wen-dang-dao-hang" class="anchor" href="#wen-dang-dao-hang"><span class="header-link"></span></a>文档导航</h2><ul>
+<li><a href="../">插件首页</a></li>
+<li><a href="demo.html">使用演示</a></li>
+<li><a href="options.html">参数文档</a></li>
+<li><a href="methods.html">方法文档</a></li>
+<li><a href="events.html">事件文档</a></li>
+</ul>
+<h2><a name="events" class="anchor" href="#events"><span class="header-link"></span></a>Events</h2><h3><a name="dp-hide" class="anchor" href="#dp-hide"><span class="header-link"></span></a>dp.hide</h3><p>Fired when the widget is hidden.</p>
+<p>Parameters:</p>
+<pre>e = {
+    date //the currently set date. Type: moment object (clone)
+}</pre><p>Emitted from:</p>
+<ul>
+<li>toggle()</li>
+<li>hide()</li>
+<li>disable()</li>
+</ul>
+<hr>
+<h3><a name="dp-show" class="anchor" href="#dp-show"><span class="header-link"></span></a>dp.show</h3><p>Fired when the widget is shown.</p>
+<p>Parameters:</p>
+<p>No parameters are include, listen to <code>dp.change</code> instead</p>
+<p>Emitted from:</p>
+<ul>
+<li>toggle()</li>
+<li>show()</li>
+</ul>
+<hr>
+<h3><a name="dp-change" class="anchor" href="#dp-change"><span class="header-link"></span></a>dp.change</h3><p>Fired when the date is changed.</p>
+<p>Parameters:</p>
+<pre>e = {
+    date, //date the picker changed to. Type: moment object (clone)
+    oldDate //previous date. Type: moment object (clone) or false in the event of a null
+}</pre><p>Emitted from:</p>
+<ul>
+<li>toggle() <strong>Note</strong>: Only fired when using <code>useCurrent</code></li>
+<li>show() <strong>Note</strong>: Only fired when using <code>useCurrent</code> or when or the date is changed to comply with date rules (min/max etc)</li>
+<li>date(newDate)</li>
+<li>minDate(minDate)</li>
+<li>maxDate(maxDate)</li>
+<li>daysOfWeekDisabled()</li>
+</ul>
+<hr>
+<h3><a name="dp-error" class="anchor" href="#dp-error"><span class="header-link"></span></a>dp.error</h3><p>Fired when a selected date fails to pass validation.</p>
+<p>Parameters:</p>
+<pre>e = {
+    date //the invalid date. Type: moment object (clone)
+}</pre><p>Emmited from:</p>
+<ul>
+<li>minDate(minDate)</li>
+<li>maxDate(maxDate)</li>
+<li>daysOfWeekDisabled()</li>
+<li>setValue() <em>private function</em></li>
+</ul>
+<hr>
+<h3><a name="dp-update" class="anchor" href="#dp-update"><span class="header-link"></span></a>dp.update</h3><p><small>4.14.30</small></p>
+<p>Fired (in most cases) when the <code>viewDate</code> changes. E.g. Next and Previous buttons, selecting a year.</p>
+<p>Parameters:</p>
+<pre>e = {
+   change, //Change type as a momentjs format token. Type: string e.g. yyyy on year change
+   viewDate //new viewDate. Type: moment object
+}</pre>
+
+    <nav class="amp-pager">
+        <ul class="am-pagination">
+          <li class="am-pagination-prev"><a href="options.html">&laquo; Prev</a>
+          </li>
+            <li class="am-pagination-next"><a href="methods.html">Next &raquo;</a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<footer class="amp-footer"><div class="am-g am-g-fixed"><div class="am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="http://weibo.com/amazeui" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="https://github.com/amazeui/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="http://amazeui.org/about/contact">联系我们</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="http://s.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amp-toolbar" id="amp-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amp-go-top"></a></div>
+<script src="http://s.amazeui.org/assets/plugin/js/app.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hm);
+  })();
+
+  (function(w, d, s) {
+    function gs(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(w , d, s ,'//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34196034-8', 'amazeui.org');
+      ga('send', 'pageview');
+    }
+    if (w.addEventListener) { w.addEventListener('load', gs, false); }
+    else if (w.attachEvent) { w.attachEvent('onload',gs); }
+  }(window, document, 'script'));
+</script>
+</body>
+</html>

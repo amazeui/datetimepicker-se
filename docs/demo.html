@@ -1,0 +1,395 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI amazeui-datetimepicker-se 使用演示 | Amaze UI 插件</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png"
+        href="http://s.amazeui.org/assets/2.x/i/favicon.png">
+  <link rel="stylesheet"
+        href="http://cdn.amazeui.org/amazeui/2.6.2/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://s.amazeui.org/assets/plugin/css/app.min.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lte IE 8 ]>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../amazeui.datetimepicker-se.css"/>
+</head>
+<body class="am-plugin">
+<header class="am-topbar am-topbar-inverse">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="http://amazeui.org" class="am-text-ir">Amaze UI</a>
+      <span class="am-badge am-badge-danger">Plugin</span>
+    </h1>
+  </div>
+</header>
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI DatetimePicker SE</h1>
+    <p class="">支持秒的日期时间选择器</p>
+      <p>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se">Star</a>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se">Fork</a>
+        <a class="github-button" href="https://github.com/amazeui/datetimepicker-se/archive/master.zip">Download</a>
+      </p>
+  </div>
+</section>
+
+<section class="amp-main">
+  <div class="am-container amp-content">
+    <h2><a name="wen-dang-dao-hang" class="anchor" href="#wen-dang-dao-hang"><span class="header-link"></span></a>文档导航</h2><ul>
+<li><a href="../">插件首页</a></li>
+<li><a href="demo.html">使用演示</a></li>
+<li><a href="options.html">参数文档</a></li>
+<li><a href="methods.html">方法文档</a></li>
+<li><a href="events.html">事件文档</a></li>
+</ul>
+<h2><a name="shi-yong-yan-shi" class="anchor" href="#shi-yong-yan-shi"><span class="header-link"></span></a>使用演示</h2><h3><a name="input-kuang-hong-fa" class="anchor" href="#input-kuang-hong-fa"><span class="header-link"></span></a>input 框触发</h3><div class="doc-example"><div>
+  <input value="2016-06-14 14:45:00" class="am-form-field" id='datetimepicker1'>
+</div>
+<script>
+  $(function() {
+    $('#datetimepicker1').datetimepicker();
+  });
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2016-06-14 14:45:00"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker1'</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#datetimepicker1'</span>).datetimepicker();
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="input-group-hong-fa" class="anchor" href="#input-group-hong-fa"><span class="header-link"></span></a>input-group 触发</h3><div class="doc-example"><!-- 注意添加 input-group -->
+<div class="am-input-group input-group" id='datetimepicker2'>
+  <input value="2016-06-02 14:45:00" class="am-form-field">
+  <!--注意添加  datepickerbutton class-->
+  <span class="am-input-group-label datepickerbutton">
+    <i class="icon-th am-icon-calendar"></i>
+  </span>
+</div>
+<script>
+  $(function() {
+    $('#datetimepicker2').datetimepicker();
+  });
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-comment">&lt;!-- 注意添加 input-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group input-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker2'</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2016-06-02 14:45:00"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!--注意添加  datepickerbutton class--&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group-label datepickerbutton"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-th am-icon-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#datetimepicker2'</span>).datetimepicker();
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="yu-yan-she-zhi" class="anchor" href="#yu-yan-she-zhi"><span class="header-link"></span></a>语言设置</h3><p>设置语言之前确保一样引入了 <a href="https://github.com/moment/moment/tree/develop/locale">moment.js 的对应语言包</a>。</p>
+<div class="doc-example"><div>
+  <input value="2016-06-14 14:45:00" class="am-form-field" id='datetimepicker3'>
+</div>
+<script>
+  $(function() {
+    $('#datetimepicker3').datetimepicker({
+      dayViewHeaderFormat: 'MMM YYYY',
+      locale: 'en'
+    });
+  });
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2016-06-14 14:45:00"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker3'</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#datetimepicker3'</span>).datetimepicker({
+      dayViewHeaderFormat: <span class="hljs-string">'MMM YYYY'</span>,
+      locale: <span class="hljs-string">'en'</span>
+    });
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="ding-yi-ri-qi-ge-shi" class="anchor" href="#ding-yi-ri-qi-ge-shi"><span class="header-link"></span></a>定义日期格式</h3><p>日期格式说明参见 <a href="http://momentjs.com/docs/#/displaying/format/">moment.js 文档</a>。</p>
+<div class="doc-example"><div>
+  <input value="" class="am-form-field" id='datetimepicker4'>
+</div>
+<script>
+  $(function() {
+    $('#datetimepicker4').datetimepicker({
+      format: 'HH:mm'
+    });
+  });
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker4'</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#datetimepicker4'</span>).datetimepicker({
+      format: <span class="hljs-string">'HH:mm'</span>
+    });
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="jin-yong-ri-qi" class="anchor" href="#jin-yong-ri-qi"><span class="header-link"></span></a>禁用日期</h3><div class="doc-example"><!-- 注意添加 input-group -->
+<div class="am-input-group input-group" id='datetimepicker5'>
+  <input class="am-form-field">
+  <!--注意添加  datepickerbutton class-->
+  <span class="am-input-group-label datepickerbutton">
+    <i class="icon-th am-icon-calendar"></i>
+  </span>
+</div>
+<script>
+  $(function() {
+    $('#datetimepicker5').datetimepicker({
+      format: 'YYYY-MM-DD',
+      defaultDate: '11/1/2013',
+      disabledDates: [
+        moment('2013-12-25'),
+        new Date(2013, 11 - 1, 21),
+        '11/22/2013 00:53'
+      ]
+    });
+  });
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-comment">&lt;!-- 注意添加 input-group --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group input-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker5'</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!--注意添加  datepickerbutton class--&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group-label datepickerbutton"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-th am-icon-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#datetimepicker5'</span>).datetimepicker({
+      format: <span class="hljs-string">'YYYY-MM-DD'</span>,
+      defaultDate: <span class="hljs-string">'11/1/2013'</span>,
+      disabledDates: [
+        moment(<span class="hljs-string">'2013-12-25'</span>),
+        <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2013</span>, <span class="hljs-number">11</span> - <span class="hljs-number">1</span>, <span class="hljs-number">21</span>),
+        <span class="hljs-string">'11/22/2013 00:53'</span>
+      ]
+    });
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="guan-lian-ri-qi-xuan-ze-qi" class="anchor" href="#guan-lian-ri-qi-xuan-ze-qi"><span class="header-link"></span></a>关联日期选择器</h3><p>第二框只能选择第一个框选中以后的日期。</p>
+<div class="doc-example"><div class="am-g">
+  <div class="am-u-sm-12 am-u-md-6">
+    <div class="am-input-group input-group" id='datetimepicker6'>
+      <input class="am-form-field">
+    <span class="am-input-group-label datepickerbutton">
+      <i class="icon-th am-icon-calendar"></i>
+    </span>
+    </div>
+  </div>
+  <div class="am-u-sm-12 am-u-md-6">
+    <div class="am-input-group input-group" id='datetimepicker7'>
+      <input class="am-form-field">
+    <span class="am-input-group-label datepickerbutton">
+      <i class="icon-th am-icon-calendar"></i>
+    </span>
+    </div>
+  </div>
+</div>
+<script >
+$(function() {
+  var $dp6 = $('#datetimepicker6');
+  var $dp7 = $('#datetimepicker7');
+   $dp6.datetimepicker();
+    $dp7.datetimepicker({
+      useCurrent: false //Important! See issue #1075
+    });
+    $dp6.on('dp.change', function(e) {
+      $dp7.data('DateTimePicker').minDate(e.date);
+    });
+    $dp7.on('dp.change', function(e) {
+     $dp6.data('DateTimePicker').maxDate(e.date);
+    });
+  });
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-g"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-u-sm-12 am-u-md-6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group input-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker6'</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group-label datepickerbutton"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-th am-icon-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-u-sm-12 am-u-md-6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group input-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker7'</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group-label datepickerbutton"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-th am-icon-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> &gt;</span><span class="javascript">
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> $dp6 = $(<span class="hljs-string">'#datetimepicker6'</span>);
+  <span class="hljs-keyword">var</span> $dp7 = $(<span class="hljs-string">'#datetimepicker7'</span>);
+   $dp6.datetimepicker();
+    $dp7.datetimepicker({
+      useCurrent: <span class="hljs-literal">false</span> <span class="hljs-comment">//Important! See issue #1075</span>
+    });
+    $dp6.on(<span class="hljs-string">'dp.change'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+      $dp7.data(<span class="hljs-string">'DateTimePicker'</span>).minDate(e.date);
+    });
+    $dp7.on(<span class="hljs-string">'dp.change'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+     $dp6.data(<span class="hljs-string">'DateTimePicker'</span>).maxDate(e.date);
+    });
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="chu-shi-ri-qi-shi-tu" class="anchor" href="#chu-shi-ri-qi-shi-tu"><span class="header-link"></span></a>初始日期视图</h3><div class="doc-example"><div class="am-g">
+  <div class="am-u-sm-12 am-u-md-6">
+    <div class="am-input-group input-group" id='datetimepicker8'>
+      <input class="am-form-field">
+    <span class="am-input-group-label datepickerbutton">
+      <i class="icon-th am-icon-calendar"></i>
+    </span>
+    </div>
+  </div>
+</div>
+<script >
+$(function() {
+  $('#datetimepicker8').datetimepicker({
+    viewMode: 'years'
+  });
+});
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-g"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-u-sm-12 am-u-md-6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group input-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker8'</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group-label datepickerbutton"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-th am-icon-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> &gt;</span><span class="javascript">
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#datetimepicker8'</span>).datetimepicker({
+    viewMode: <span class="hljs-string">'years'</span>
+  });
+});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="zui-xiao-shi-tu-mo-shi" class="anchor" href="#zui-xiao-shi-tu-mo-shi"><span class="header-link"></span></a>最小视图模式</h3><div class="doc-example"><div class="am-g">
+  <div class="am-u-sm-12 am-u-md-6">
+    <div class="am-input-group input-group" id='datetimepicker9'>
+      <input class="am-form-field">
+    <span class="am-input-group-label datepickerbutton">
+      <i class="icon-th am-icon-calendar"></i>
+    </span>
+    </div>
+  </div>
+</div>
+<script >
+$(function() {
+  $('#datetimepicker9').datetimepicker({
+    viewMode: 'years',
+    format: 'YYYY-MM'
+  });
+});
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-g"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-u-sm-12 am-u-md-6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group input-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker9'</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group-label datepickerbutton"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-th am-icon-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> &gt;</span><span class="javascript">
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#datetimepicker9'</span>).datetimepicker({
+    viewMode: <span class="hljs-string">'years'</span>,
+    format: <span class="hljs-string">'YYYY-MM'</span>
+  });
+});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="jin-zhi-xuan-ze-zhou-mo" class="anchor" href="#jin-zhi-xuan-ze-zhou-mo"><span class="header-link"></span></a>禁止选择周末</h3><div class="doc-example"><div class="am-g">
+  <div class="am-u-sm-12 am-u-md-6">
+    <div class="am-input-group input-group" id='datetimepicker10'>
+      <input class="am-form-field">
+    <span class="am-input-group-label datepickerbutton">
+      <i class="icon-th am-icon-calendar"></i>
+    </span>
+    </div>
+  </div>
+</div>
+<script >
+$(function() {
+  $('#datetimepicker10').datetimepicker({
+    daysOfWeekDisabled: [0, 6]
+  });
+});
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-g"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-u-sm-12 am-u-md-6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group input-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'datetimepicker10'</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-form-field"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"am-input-group-label datepickerbutton"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-th am-icon-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> &gt;</span><span class="javascript">
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'#datetimepicker10'</span>).datetimepicker({
+    daysOfWeekDisabled: [<span class="hljs-number">0</span>, <span class="hljs-number">6</span>]
+  });
+});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><h3><a name="nei-lian-xian-shi" class="anchor" href="#nei-lian-xian-shi"><span class="header-link"></span></a>内联显示</h3><div class="doc-example"><div id="datetimepicker11"></div>
+<script>
+  $(function() {
+    $('#datetimepicker11').datetimepicker({
+      inline: true,
+      sideBySide: true
+    });
+  });
+</script></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datetimepicker11"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#datetimepicker11'</span>).datetimepicker({
+      inline: <span class="hljs-literal">true</span>,
+      sideBySide: <span class="hljs-literal">true</span>
+    });
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div><script src="moment-with-locales.min.js"></script>
+<script src="../amazeui.datetimepicker-se.js"></script>
+
+
+    <nav class="amp-pager">
+        <ul class="am-pagination">
+          <li class="am-pagination-prev"><a href="../">&laquo; Prev</a>
+          </li>
+            <li class="am-pagination-next"><a href="api.html">Next &raquo;</a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<footer class="amp-footer"><div class="am-g am-g-fixed"><div class="am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="http://weibo.com/amazeui" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="https://github.com/amazeui/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="http://amazeui.org/about/contact">联系我们</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="http://s.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amp-toolbar" id="amp-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amp-go-top"></a></div>
+<script src="http://s.amazeui.org/assets/plugin/js/app.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hm);
+  })();
+
+  (function(w, d, s) {
+    function gs(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(w , d, s ,'//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34196034-8', 'amazeui.org');
+      ga('send', 'pageview');
+    }
+    if (w.addEventListener) { w.addEventListener('load', gs, false); }
+    else if (w.attachEvent) { w.attachEvent('onload',gs); }
+  }(window, document, 'script'));
+</script>
+</body>
+</html>
