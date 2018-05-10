@@ -31,6 +31,8 @@
 3. 引入 jQuery、Moment.js、DatetimePicker SE 插件（`dist` 目录下的 JS）：
 
   除了 jQuery 外，DatetimePicker SE 还依赖 [Moment.js](https://github.com/moment/moment/)。如果觉得 `moment-with-locales.js` 太大，可以引入 `moment.min.js`（即不包含语言文件的版本），然后引入[需要的语言文件](https://github.com/moment/moment/tree/master/locale)。
+  
+  **注意**：`amazeui.datetimepicker-se.min.js` **必须在 `<body>` 中引入**，否则无法默认参数取不到 `document.body` 插件无法正常工作。
 
   ```html
   <script src="path/to/jquery.min.js"></script>
